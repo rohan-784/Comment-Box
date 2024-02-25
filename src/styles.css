@@ -1,0 +1,381 @@
+* {
+  font-family: Monaco, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  /* background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+  background-size: cover;
+  background-position: center;
+}
+
+.App {
+  margin-top: 20px;
+  width: fit-content;
+}
+
+.commentContainer {
+  margin-top: 6px;
+  /* background-color: #d3d3d3e0; */
+  display: flex;
+  flex-direction: column;
+  /* padding: 5px 10px;*/
+  width: 300px;
+  cursor: pointer;
+  /* border-radius: 5px; */
+  position: relative;
+
+  font-family: cursive;
+  background-color: #fff;
+  /* height: 250px; */
+  border: 2px solid #0a0a0a;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  margin: 0 0 20px 0;
+  padding: 10px 10px;
+  box-shadow: 0 50px 42px 0 rgba(0, 0, 0, 0.2), 0 46px 72px 0 rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+}
+.comment-timestamp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 6px 6px 0px;
+}
+
+.inputContainer > .comment-timestamp {
+  display: none;
+}
+
+.commentContainer:hover {
+  background-color: #d3d3d3bf;
+  box-shadow: 0 50px 42px 0 rgba(0, 0, 0, 0.2), 0 46px 72px 0 rgba(0, 0, 0, 0.5);
+}
+
+.inputContainer {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 5px;
+  width: 60vw;
+}
+
+.inputContainer2 {
+  display: flex;
+  /* align-items: flex-end; */
+  flex-direction: column;
+  gap: 5px;
+  width: 60vw;
+}
+
+h2 {
+  margin-right: 80px;
+}
+.ex {
+  width: 60vw;
+  margin: auto;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+.App > div {
+  width: 80vw;
+  margin: auto;
+}
+/* .inputContainer > div,
+.commentContainer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+} */
+.inputContainer > span {
+  margin-top: 5px;
+}
+
+.inputContainer__input {
+  margin: 6px 0 0px 0;
+  padding: 5px;
+  display: flex;
+  border: 1px solid lightgray;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #e7e7e7;
+  width: 280px;
+  height: 50px;
+}
+
+.first_input {
+  margin: 0;
+}
+
+.commentContainer > span {
+  margin: 0 5px;
+}
+
+.reply {
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #4e4e4e;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.comment {
+  color: #ffffff;
+  background-color: #569dff;
+  letter-spacing: 0.8px;
+}
+
+.heading2 {
+  display: flex;
+  align-items: flex-start;
+  /* margin-right: 560px; */
+}
+
+.starButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#star_img {
+  width: 25px;
+  height: 25px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 7px 37px 0 rgba(0, 0, 0, 0.9);
+  border-radius: 200px;
+  margin-bottom: 2px;
+}
+
+#star_img:hover {
+  border-color: #000000;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.7), 0 7px 37px 0 rgba(0, 0, 0, 0.9);
+  /* background-color:rgb(170, 165, 165); */
+}
+
+#star_img2 {
+  width: 25px;
+  height: 25px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 7px 37px 0 rgba(0, 0, 0, 0.9);
+  border-radius: 200px;
+  margin-bottom: 2px;
+  padding: 8px 0px 0px 8px;
+}
+
+#star_img2:hover {
+  border-color: #000000;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.7), 0 7px 37px 0 rgba(0, 0, 0, 0.9);
+  /* background-color:rgb(170, 165, 165); */
+}
+
+.box {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 200px;
+  align-self: flex-start;
+  gap: 2rem;
+}
+
+.reply2 {
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: #e47171;
+  font-weight: bolder;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px #000000;
+  text-transform: uppercase;
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.8);
+  justify-content: space-evenly;
+  padding: 15px 25px 15px 25px;
+  margin-bottom: 30px;
+  background-color: beige;
+}
+
+.reply2:hover {
+  color: #fff;
+  background: rgb(0, 0, 0);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.text-center {
+  color: #ffffff;
+  font-family: cursive;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin: 20px 50px 20px 50px;
+  display: flex;
+  padding: 0px 50px 0px 50px;
+  justify-content: center;
+  font-size: 42px;
+  letter-spacing: 2px;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+  width: 100%;
+}
+
+.text-center:hover {
+  color: rgb(0, 0, 0);
+  text-shadow: 5px 5px 5px rgb(255, 255, 255);
+}
+
+#results {
+  font-family: cursive;
+  background-color: #fff;
+  width: 70%;
+  border: 2px solid #0a0a0a;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  margin: 0 0 20px 0;
+  padding: 15px 15px;
+  box-shadow: 0 50px 42px 0 rgba(0, 0, 0, 0.2), 0 46px 72px 0 rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+#results:hover {
+  box-shadow: 0 50px 42px 0 rgba(0, 0, 0, 0.2), 0 46px 72px 0 rgba(0, 0, 0, 0.5);
+}
+
+#results1 {
+  font-family: cursive;
+  background-color: #fff;
+  /* width: 70%; */
+  border: 2px solid #0a0a0a;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  margin: 30 0 5px 0;
+  /* padding: 15px 15px; */
+  /* box-shadow: 0 50px 42px 0 rgba(0, 0, 0, 0.2), 0 46px 72px 0 rgba(0, 0, 0, 0.9); */
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+#results1:hover {
+  box-shadow: 0 50px 42px 0 rgba(0, 0, 0, 0.2), 0 46px 72px 0 rgba(0, 0, 0, 0.5);
+}
+
+#results4 {
+  font-family: cursive;
+  background-color: #fff;
+  /* width: 70%; */
+  border: 2px solid #0a0a0a;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  margin: 30 0 5px 0;
+  /* padding: 15px 15px; */
+  /* box-shadow: 0 50px 42px 0 rgba(0, 0, 0, 0.2), 0 46px 72px 0 rgba(0, 0, 0, 0.9); */
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+#results4:hover {
+  box-shadow: 0 50px 42px 0 rgba(0, 0, 0, 0.2), 0 46px 72px 0 rgba(0, 0, 0, 0.5);
+}
+
+.heading3 {
+  color: rgb(0, 0, 0);
+  font-family: cursive;
+  font-weight: bolder;
+  text-transform: uppercase;
+  /* margin: 20px 50px 20px 50px;
+  display: flex;
+  padding: 0px 50px 0px 50px;
+  justify-content: center;*/
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-shadow: 2px 1px 1px rgb(255, 255, 255);
+  font-weight: 900;
+  /* width: 100%; */
+}
+
+.heading3:hover {
+  color: rgb(0, 0, 0);
+  text-shadow: 5px 5px 5px rgb(255, 255, 255);
+}
+
+#select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 8px, 5px 8px, 2px 1.5em;
+  background-repeat: no-repeat;
+
+  font-weight: bolder;
+  text-align: center;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  color: #000000;
+  background-color: #ffffff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+  width: 160%;
+  margin: 20px 0px 20px 0px;
+  padding: 10px;
+}
+
+#select:hover {
+  color: #ffffff;
+  background: rgb(0, 0, 0, 0.6);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+  border: 2px solid #fffefe;
+
+  background-image: linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 8px, 5px 8px, 2px 1.5em;
+  background-repeat: no-repeat;
+}
+
+.heading4 {
+  color: rgb(0, 0, 0);
+  font-family: cursive;
+  font-weight: bolder;
+  text-transform: uppercase;
+  /* margin: 20px 50px 20px 50px;
+  display: flex;
+  padding: 0px 50px 0px 50px;
+  justify-content: center;*/
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-shadow: 2px 1px 1px rgb(255, 255, 255);
+  font-weight: 900;
+  /* width: 100%; */
+}
+
+.heading4:hover {
+  color: rgb(0, 0, 0);
+  text-shadow: 5px 5px 5px rgb(255, 255, 255);
+}
